@@ -1,0 +1,40 @@
+{
+    "name": "i3/opayo-pi",
+    "license": "MIT",
+    "type": "library",
+    "description": "A library to handle the message content and structure for the Opayo Pi (was Sage Pay Integration) payment gateway",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "payment",
+        "sagepay"
+    ],
+    "homepage": "https://github.com/academe/SagePay-Integration",
+    "authors": [
+        {
+            "name": "Jason Judge",
+            "email": "jason.judge@academe.co.uk",
+            "homepage": "http://academe.co.uk/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "shrikeh/teapot": "^1.0|^2.0",
+        "psr/http-message": "^1.0",
+        "alcohol/iso4217": "^3.0|^4.0"
+    },
+    "suggest": {
+        "moneyphp/money": "^3.0",
+        "guzzlehttp/psr7": "^1.2.0",
+        "guzzlehttp/guzzle": "^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Academe\\Opayo\\Pi\\": "src/"
+        }
+    }
+}
