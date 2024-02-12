@@ -10,7 +10,7 @@ namespace Academe\Opayo\Pi\Request;
  *
  * With the right PCI compliance, the details could be captured
  * by the merchant site and sent direct to SagePay server-to-server,
- * similat to how Sage Pay Direct would.
+ * similar to how Sage Pay Direct would.
  */
 
 use Academe\Opayo\Pi\Model\Auth;

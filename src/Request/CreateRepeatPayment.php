@@ -12,8 +12,8 @@ use UnexpectedValueException;
 use Academe\Opayo\Pi\Model\Endpoint;
 use Academe\Opayo\Pi\Model\Auth;
 use Academe\Opayo\Pi\Money\AmountInterface;
-use Academe\Opayo\Pi\Model\AddressInterface;
-use Academe\Opayo\Pi\Model\PersonInterface;
+use Academe\Opayo\Pi\Request\Model\AddressInterface;
+use Academe\Opayo\Pi\Request\Model\PersonInterface;
 
 class CreateRepeatPayment extends AbstractRequest
 {
@@ -84,10 +84,10 @@ class CreateRepeatPayment extends AbstractRequest
     }
 
     /**
-     * @param ShippingAddress $shippingAddress
-     * @return Transaction
+     * @param AddressInterface $shippingAddress
+     * @return CreateRepeatPayment
      */
-    public function withShippingAddress(ShippingAddress $shippingAddress)
+    public function withShippingAddress(AddressInterface $shippingAddress)
     {
         $copy = clone $this;
         $copy->shippingAddress = $shippingAddress;
@@ -95,10 +95,10 @@ class CreateRepeatPayment extends AbstractRequest
     }
 
     /**
-     * @param ShippingRecipient $shippingRecipient
-     * @return Repeat
+     * @param PersonInterface $shippingRecipient
+     * @return CreateRepeatPayment
      */
-    public function withShippingRecipient(ShippingRecipient $shippingRecipient)
+    public function withShippingRecipient(PersonInterface $shippingRecipient)
     {
         $copy = clone $this;
         $copy->shippingRecipient = $shippingRecipient;
